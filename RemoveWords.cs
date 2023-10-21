@@ -1,3 +1,7 @@
+//Simple utility which removes all words which are less than 4 characters
+//from a textfiles and writes all other words to another text file 
+
+
 using System.Runtime.InteropServices;
 
 public class RemoveWords
@@ -5,7 +9,7 @@ public class RemoveWords
     public static void WordsRemover()
     {   
         //string of where the words are located and reads them
-        string pathWords = "./wordlists/wordsduped.txt";
+        string pathWords = "./wordlists/english.txt";
         string[] lines = File.ReadAllLines(pathWords);
         
         string filteredWordsPath = "./wordlists/wordsn.txt";
