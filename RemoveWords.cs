@@ -5,10 +5,10 @@ public class RemoveWords
     public static void WordsRemover()
     {   
         //string of where the words are located and reads them
-        string pathWords = "./wordsduped.txt";
+        string pathWords = "./wordlists/wordsduped.txt";
         string[] lines = File.ReadAllLines(pathWords);
         
-        string filteredWordsPath = "./wordsn.txt";
+        string filteredWordsPath = "./wordlists/wordsn.txt";
 
         //checks if words is less than 4, writes it to new file otherwise
         foreach (string line in lines)

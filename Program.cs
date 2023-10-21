@@ -29,8 +29,5 @@ public class Program
         //string line = File.ReadLines(filePath).ElementAt(36);
         //Console.WriteLine(line);
 
-
-
-
     }
 }
