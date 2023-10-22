@@ -26,7 +26,7 @@ public class Program
             var input = Console.ReadLine();
             validInput = int.TryParse(input, out option);
             
-            if (option <= 0 || validInput == false || option > lines.Length)
+            if (option <= 0 || validInput == false)
             {   
                 Console.Clear();
                 Console.WriteLine("ERROR: INVALID INPUT");
