@@ -14,18 +14,19 @@ public class Program
         //RemoveWords.WordsRemover(); 
 
         int option = 4;
+        string filePath = "./wordlists/wordsn.txt"; //filepath of location of words
+        string[] lines = File.ReadAllLines(filePath); //loads file into memory ~15mb
 
         bool validInput = false; 
 
         while (!validInput)
         {   
             Console.Clear();
-            Console.Write("How many words should your password contain (default 4): ");
+            Console.Write("How many words should your password contain: ");
             var input = Console.ReadLine();
-
             validInput = int.TryParse(input, out option);
-
-            if (option <= 0 || validInput == false)
+            
+            if (option <= 0 || validInput == false || option > lines.Length)
             {   
                 Console.Clear();
                 Console.WriteLine("ERROR: INVALID INPUT");
@@ -36,8 +37,6 @@ public class Program
         }
         
         Random random =  new Random(); 
-        string filePath = "./wordlists/wordsn.txt"; //filepath of location of words
-        string[] lines = File.ReadAllLines(filePath); //loads file into memory ~15mb
         int[] randomValues = new int[option]; //array to hold random values, as many as the user requested
 
         for (int i = 0; i < option; i++) 
